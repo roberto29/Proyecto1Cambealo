@@ -25,7 +25,8 @@ namespace Proyecto1Cambealo
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/zocial.css"));
 
             // Para la depuración, establezca EnableOptimizations en false. Para obtener más información,
             // visite http://go.microsoft.com/fwlink/?LinkId=301862

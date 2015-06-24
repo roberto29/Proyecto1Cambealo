@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Proyecto1Cambealo.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -26,5 +27,7 @@ namespace Proyecto1Cambealo.Controllers
 
             return View();
         }
+
+
     }
 }

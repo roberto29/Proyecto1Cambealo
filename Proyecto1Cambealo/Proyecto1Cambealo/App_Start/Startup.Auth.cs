@@ -50,11 +50,11 @@ namespace Proyecto1Cambealo
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+
+            app.UseGoogleAuthentication(
+       clientId: "500888370596-04lnik1rcllaebd0jk8sr16ohs03ajco.apps.googleusercontent.com",
+       clientSecret: "aQaxTJkIpB9_vajh3BPMJni3");
+           
         }
     }
 }
