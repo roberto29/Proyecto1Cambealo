@@ -15,6 +15,7 @@ namespace Proyecto1Cambealo.Models
             // Agregar reclamaciones de usuario personalizado aquí
             return userIdentity;
         }
+        public int Age { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

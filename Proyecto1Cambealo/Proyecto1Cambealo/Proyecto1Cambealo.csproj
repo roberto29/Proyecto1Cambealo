@@ -107,6 +107,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -175,14 +177,49 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProductosPublicosController.cs" />
+    <Compile Include="Controllers\TransaccionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ModelProyecto.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelProyecto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelProyecto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Productos.cs">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transacciones.cs">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -204,6 +241,23 @@
     <Content Include="Content\zocial-regular-webfont.eot" />
     <Content Include="Content\zocial-regular-webfont.ttf" />
     <Content Include="Content\zocial-regular-webfont.woff" />
+    <EntityDeploy Include="Models\ModelProyecto.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelProyecto.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelProyecto.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelProyecto.edmx.diagram">
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModelProyecto.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Icon.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -256,6 +310,21 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Productos\Create.cshtml" />
+    <Content Include="Views\Productos\Delete.cshtml" />
+    <Content Include="Views\Productos\Details.cshtml" />
+    <Content Include="Views\Productos\Edit.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Transacciones\Create.cshtml" />
+    <Content Include="Views\Transacciones\Delete.cshtml" />
+    <Content Include="Views\Transacciones\Details.cshtml" />
+    <Content Include="Views\Transacciones\Edit.cshtml" />
+    <Content Include="Views\Transacciones\Index.cshtml" />
+    <Content Include="Views\ProductosPublicos\Create.cshtml" />
+    <Content Include="Views\ProductosPublicos\Delete.cshtml" />
+    <Content Include="Views\ProductosPublicos\Details.cshtml" />
+    <Content Include="Views\ProductosPublicos\Edit.cshtml" />
+    <Content Include="Views\ProductosPublicos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -263,6 +332,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

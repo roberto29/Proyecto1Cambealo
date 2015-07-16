@@ -49,6 +49,7 @@ namespace Proyecto1Cambealo.Models
 
         [Display(Name = "¿Recordar cuenta?")]
         public bool RememberMe { get; set; }
+
     }
 
     public class RegisterViewModel
@@ -68,6 +69,8 @@ namespace Proyecto1Cambealo.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+        public string PhoneNumber { get; set; }
+        public int Age { get; set; }
     }
 
     public class ResetPasswordViewModel
